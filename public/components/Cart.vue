@@ -14,14 +14,15 @@
 			<CartItem v-for="item in getCartList" :key="item.id" :item="item" />
 		</table>
 	</div>
-
-	<img
-		v-else
-		:src="'../assests/images/cart-empty.png'"
-		alt="item-image"
-		class="class-empty-image"
-		width="1"
-	/>
+	<div class="empty-content" v-else>
+		<img
+			:src="'../assests/images/cart-empty.png'"
+			alt="item-image"
+			class="class-empty-image"
+			width="1"
+		/>
+		<h4>Your cart is empty !</h4>
+	</div>
 </template>
 
 <script>
@@ -66,5 +67,14 @@ table {
 .header {
 	display: inline-block;
 	width: auto;
+}
+
+.empty-content {
+	/* width: 300px;
+	height: 300px;
+	border: 1px solid #c3c3c3;
+	display: flex;
+	flex-wrap: wrap; */
+	align-content: center;
 }
 </style>
