@@ -1,13 +1,17 @@
 <template>
   <div>
-    <h1>App component</h1>
+    <Application/>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
+import Application from "./pages/Application.vue"
 export default defineComponent({
   name: "App",
+  components: {
+    Application
+  }
 });
 </script>
 
