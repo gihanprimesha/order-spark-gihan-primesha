@@ -2,7 +2,7 @@
 	<NavigationBar />
 	<carousel :items-to-show="4.5">
 		<slide v-for="product in products" :key="product.id">
-			<Product :productDetails="product" />
+			<Product :productDetails="product" @addToCart="addItems" />
 		</slide>
 	</carousel>
 </template>
@@ -26,6 +26,12 @@ export default {
 		return {
 			products: products,
 		};
+	},
+
+	methods: {
+		addItems: function (item) {
+			this.$store.commit('addToCart', item);
+		},
 	},
 };
 </script>
