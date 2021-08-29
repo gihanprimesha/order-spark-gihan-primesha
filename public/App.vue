@@ -1,19 +1,23 @@
 <template>
   <div>
-    <Application/>
+    <Application />
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import Application from "./pages/Application.vue"
+import { defineComponent } from "vue";
+import Application from "./pages/Application.vue";
 export default defineComponent({
   name: "App",
   components: {
-    Application
-  }
+    Application,
+  },
 });
 </script>
 
-<style scoped>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
 </style>
